@@ -3,6 +3,15 @@ let weather =  document.getElementById('weatherdata').innerHTML;
 let showlocation= document.getElementById('showlocation').innerHTML;
 let tripdate = document.getElementById('start').value;
 
+function getMyDateValue(e) {
+    // Get the date value from the srcElement of the event
+   var tripdate = e.srcElement.value;
+   console.log(tripdate);
+   return tripdate;
+}
+  // Add an event listener to my date field 
+  document.getElementById("start").addEventListener("blur", getMyDateValue);
+
 let d= Date.parse(tripdate);
 const e= d+86400000;
 const f = new Date(e);
