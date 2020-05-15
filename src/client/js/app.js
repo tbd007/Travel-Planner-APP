@@ -45,6 +45,7 @@ var today = new Date();
  };
 
 let days=getDiff();
+console.log(days);
 
 function handleSubmit(event) {
     event.preventDefault();
@@ -121,7 +122,7 @@ function handleSubmit(event) {
             console.log(forecasturl);
 
 
-            if (days < 8){
+            if (days < 7){
             fetch(weatherurl, requestOptions)
               .then(response => response.text())
               .then(response => {
@@ -138,7 +139,7 @@ function handleSubmit(event) {
               .catch(error =>{
                 console.log(error);
               });  
-            //  https://api.weatherbit.io/v2.0/history/daily?lat=38.123&lon=-78.543&start_date=2020-05-08&end_date=2020-05-09&key=26ae9063bb3a405f9e9ba923caed9fd1  
+             
             } else {
               fetch(forecasturl, requestOptions)
               .then(response => response.text())
