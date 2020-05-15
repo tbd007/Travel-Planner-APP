@@ -86,7 +86,7 @@ function handleSubmit(event) {
         redirect: 'manual'
       };
 
-    var base = 'http://api.geonames.org/postalCodeSearchJSON?placename='  ;
+    var base = 'https://secure.geonames.net/postalCodeSearchJSON?placename='  ;
     var end = '&maxRows=10&username=tbd82';
     var code = '&country=';
     let country = document.getElementById('countryCode').value;
