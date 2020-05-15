@@ -1,7 +1,7 @@
 let city = document.getElementById('city').value;
 let weather =  document.getElementById('weatherdata').innerHTML;
 let showlocation= document.getElementById('showlocation').innerHTML;
-let tripdate = document.getElementById('start').value;
+
 
 function getMyDateValue(e) {
     // Get the date value from the srcElement of the event
@@ -9,8 +9,10 @@ function getMyDateValue(e) {
    console.log(tripdate);
    return tripdate;
 }
+
   // Add an event listener to my date field 
-  document.getElementById("start").addEventListener("blur", getMyDateValue);
+document.getElementById("start").addEventListener("blur", getMyDateValue);
+let tripdate=getMyDateValue();
 
 let d= Date.parse(tripdate);
 const e= d+86400000;
