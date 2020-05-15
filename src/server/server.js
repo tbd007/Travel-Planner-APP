@@ -27,26 +27,6 @@ app.get('/',function(req,res){
 
 
 
-app.post("/api", (req, res) => {
-  code = req.body;
-  let baseURL = "https://restcountries.eu/rest/v2/alpha/"
-  let url = baseURL + code;
-  var options = {
-    'method': 'GET',
-    'url': url,
-    'headers': {
-      'Cookie': '__cfduid=dc280fb5db0d0b16bee35d049343ea9691589536067'
-    }
-  };
-  request(options, function (error, response) { 
-    
-    if (error) throw new Error(error);
-    console.log(response.body);
-    data = response.body
-    console.log(data)
-    res.send(data)
-  });
-});
 
 
 
