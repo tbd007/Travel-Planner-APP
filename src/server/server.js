@@ -25,31 +25,6 @@ app.get('/',function(req,res){
   res.sendFile('dist/index.html')
 })
 
-const formtext = document.getElementById('countryCode').value;
-    if (!formtext) return;
-    console.log(formtext);
-        fetch("http://localhost:3000/api", {
-        method: "POST",
-        mode:"cors",
-        headers: {
-        "Accept": "application/json, text/plain, */*",
-        "Content-Type": "application/json"
-        },
-        body: JSON.stringify({formtext})
-    })
-        .then(res => res.json())
-        .then(function(res) {
-        console.log(res);
-        })
-        .then(data => {
-            document.getElementById('date').innerHTML += data.currencies[0].code + data.languages[0].name;
-        })
-
-
-
-
-
-  
 
 
 
