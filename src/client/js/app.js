@@ -176,6 +176,7 @@ function handleSubmit(event) {
     var city = document.getElementById('city').value;
     document.getElementById('date').innerHTML+=`<p>${tripdate} : Departure in ${days} days!</p>`;
     document.getElementById('location').innerHTML=`<p>${city}</p>`;   
+ }     
 
 const form = document.getElementById('add_details')
 const ul = document.querySelector('ul')
