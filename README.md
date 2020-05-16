@@ -23,7 +23,7 @@ Run build for the project using the cmd as follow:
 npm run build-prod
 Run the server.
 npm start
-View the URL http://localhost:8080/ in browser.
+View the URL http://localhost:5000/ in browser.
 
 # Preview
 
